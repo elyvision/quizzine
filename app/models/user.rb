@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :quizzs
   has_many :answer_users
+
+  validates :name, presence: true
+  validates :name, uniqueness: true
 end
