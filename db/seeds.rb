@@ -26,19 +26,17 @@ quizz1 = Quizz.create!({
 })
 puts "created #{quizz1.theme}"
 
+#/////////////////////////////////////////
+
+
 question1 = Question.create!({
-  sujet: "Quelle ingredient y a t'il dans la choucroute?",
+  sujet: "Quel ingredient y a t'il dans la choucroute?",
   quizz_id: quizz1.id
 })
 puts "created #{question1.sujet}"
 
 
-answer1 = Answer.create!({
-  proposition: "porc",
-  good_not_good: true,
-  question_id: question1.id
-})
-puts "created #{answer1.proposition}"
+
 
 
 answer2 = Answer.create!({
@@ -56,6 +54,12 @@ answer3 = Answer.create!({
 })
 puts "created #{answer3.proposition}"
 
+answer1 = Answer.create!({
+  proposition: "porc",
+  good_not_good: true,
+  question_id: question1.id
+})
+puts "created #{answer1.proposition}"
 
 
 answer4 = Answer.create!({
@@ -65,35 +69,14 @@ answer4 = Answer.create!({
 })
 puts "created #{answer4.proposition}"
 
+
 #///////////////////////////////////////
 
-
-
-user2 = User.create!({
-  name: "Wilsock",
-  email: "Wilsock1940@armyspy.com",
-  password: "12345678"
+question2 = Question.create!({
+  sujet: "Quel ingredient y a t'il dans le Cassoulet?",
+  quizz_id: quizz1.id
 })
 
-
-quizz2 = Quizz.create!({
-  theme: "Française"
-})
-
-
-
-question1 = Question.create!({
-  sujet: "Quelle ingredient y a t'il dans le Cassoulet?",
-  quizz_id: quizz2.id
-})
-
-
-
-answer1 = Answer.create!({
-  proposition: "carotte",
-  good_not_good: true,
-  question_id: question2.id
-})
 
 
 
@@ -110,6 +93,11 @@ answer3 = Answer.create!({
   question_id: question2.id
 })
 
+answer1 = Answer.create!({
+  proposition: "carotte",
+  good_not_good: true,
+  question_id: question2.id
+})
 
 answer4 = Answer.create!({
   proposition: "pomme de terre",
@@ -117,26 +105,11 @@ answer4 = Answer.create!({
   question_id: question2.id
 })
 
-
 #///////////////////////////////////////
 
-
-user3 = User.create!({
-  name: "paul",
-  email: "paul1940@dayrep.com",
-  password: "12345678"
-})
-
-
-quizz3 = Quizz.create!({
-  theme: "Française"
-})
-
-
-
 question3 = Question.create!({
-  sujet: "Quelle ingredient y a t'il dans le Cuissot de cochon de lait?",
-  quizz_id: quizz3.id
+  sujet: "Quel ingredient y a t'il dans le Cuissot de cochon de lait?",
+  quizz_id: quizz1.id
 })
 
 
@@ -171,32 +144,11 @@ answer4 = Answer.create!({
 
 #///////////////////////////////////////
 
-
-user4 = User.create!({
-  name: "paul",
-  email: "paul1940@dayrep.com",
-  password: "12345678"
-})
-
-
-quizz4 = Quizz.create!({
-  theme: "Française"
-})
-
-
-
 question4 = Question.create!({
-  sujet: "Quelle ingredient y a t'il dans le Coq au vin jaune?",
-  quizz_id: quizz4.id
+  sujet: "Quel ingredient y a t'il dans le Coq au vin jaune?",
+  quizz_id: quizz1.id
 })
 
-
-
-answer1 = Answer.create!({
-  proposition: "vin jaune",
-  good_not_good: true,
-  question_id: question4.id
-})
 
 
 
@@ -213,11 +165,603 @@ answer3 = Answer.create!({
   question_id: question4.id
 })
 
+answer1 = Answer.create!({
+  proposition: "vin jaune",
+  good_not_good: true,
+  question_id: question4.id
+})
+
 
 answer4 = Answer.create!({
   proposition: "saucisses polonaises",
   good_not_good: false,
   question_id: question4.id
 })
+
+#////////////////////////////////////////
+
+question5 = Question.create!({
+  sujet: " Quel ingredient y a t'il dans la Galettes de poulet?",
+  quizz_id: quizz1.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "pommes golden",
+  good_not_good: false,
+  question_id: question5.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "cannelle",
+  good_not_good: false,
+  question_id: question5.id
+})
+
+answer1 = Answer.create!({
+  proposition: "concombre",
+  good_not_good: true,
+  question_id: question5.id
+})
+
+answer4 = Answer.create!({
+  proposition: "carotte",
+  good_not_good: false,
+  question_id: question5.id
+})
+
+
+#///////////////////////////////////////
+
+
+question7 = Question.create!({
+  sujet: "Quel ingredient est present dans la Macaronade sétoise?",
+  quizz_id: quizz1.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "sucre glace",
+  good_not_good: false,
+  question_id: question7.id
+})
+
+answer1 = Answer.create!({
+  proposition: "tranches de paleron",
+  good_not_good: true,
+  question_id: question7.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "praliné en pâte",
+  good_not_good: false,
+  question_id: question7.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "crème pâtissière",
+  good_not_good: false,
+  question_id: question7.id
+})
+
+#////////////////////////////////
+question8 = Question.create!({
+  sujet: "Quel ingredient est present dans la Tarte tatin?",
+  quizz_id: quizz1.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "concombre",
+  good_not_good: false,
+  question_id: question8.id
+})
+
+answer1 = Answer.create!({
+  proposition: "pommes golden",
+  good_not_good: true,
+  question_id: question8.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "tomates cerises",
+  good_not_good: false,
+  question_id: question8.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "mie de pain",
+  good_not_good: false,
+  question_id: question8.id
+})
+
+#//////////////////////////////////////
+
+question9 = Question.create!({
+  sujet: "Quel ingredient est present dans le Clafoutis?",
+  quizz_id: quizz1.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "pâtes feuilletées",
+  good_not_good: false,
+  question_id: question9.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "oignon",
+  good_not_good: false,
+  question_id: question9.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "poivre",
+  good_not_good: false,
+  question_id: question9.id
+})
+
+answer1 = Answer.create!({
+  proposition: "poires",
+  good_not_good: true,
+  question_id: question9.id
+})
+
+# ///////////////////////////
+
+question6 = Question.create!({
+  sujet: "Quel ingredient est present dans le Pâté aux pommes de terre?",
+  quizz_id: quizz1.id
+})
+
+
+
+answer1 = Answer.create!({
+  proposition: "oignon",
+  good_not_good: true,
+  question_id: question6.id
+})
+
+
+
+answer2 = Answer.create!({
+  proposition: " levure",
+  good_not_good: false,
+  question_id: question6.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "sucre roux",
+  good_not_good: false,
+  question_id: question6.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "fuits rouges",
+  good_not_good: false,
+  question_id: question6.id
+})
+#////////////////////////////
+#ITALIENNE
+
+#////////////////////////////////////
+# user2 = User.create!({
+#   name: "Wilsock",
+#   email: "Wilsock1940@armyspy.com",
+#   password: "12345678"
+# })
+
+
+quizz2 = Quizz.create!({
+  theme: "Italienne"
+})
+
+
+#////////////////////////////////////
+
+question1 = Question.create!({
+  sujet: "Quel ingredient est present dans les Endives au jambon?",
+  quizz_id: quizz2.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "filet de poulet",
+  good_not_good: false,
+  question_id: question1.id
+})
+
+answer1 = Answer.create!({
+  proposition: "jambon blanc",
+  good_not_good: true,
+  question_id: question1.id
+})
+
+answer3 = Answer.create!({
+  proposition: "mozzarella",
+  good_not_good: false,
+  question_id: question1.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "tomate ",
+  good_not_good: false,
+  question_id: question1.id
+})
+
+#/////////////////////////////////////
+question2 = Question.create!({
+  sujet: "Quel ingredient est present dans la Roulade de poulet?",
+  quizz_id: quizz2.id
+})
+
+
+
+answer1 = Answer.create!({
+  proposition: "pesto rosso",
+  good_not_good: true,
+  question_id: question2.id
+})
+
+
+
+answer2 = Answer.create!({
+  proposition: "jambon blanc",
+  good_not_good: false,
+  question_id: question2.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "sauce italienne",
+  good_not_good: false,
+  question_id: question2.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "gruyère",
+  good_not_good: false,
+  question_id: question2.id
+})
+#///////////////////////////////////////
+question3 = Question.create!({
+  sujet: "Quel ingredient est present dans le Scones au parmesan?",
+  quizz_id: quizz2.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "olives vertes",
+  good_not_good: false,
+  question_id: question3.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "ail",
+  good_not_good: false,
+  question_id: question3.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "tomates",
+  good_not_good: false,
+  question_id: question3.id
+})
+
+answer1 = Answer.create!({
+  proposition: "moutarde à l'ancienne",
+  good_not_good: true,
+  question_id: question3.id
+})
+
+#///////////////////////////////////
+
+question4 = Question.create!({
+  sujet: "Quel ingredient est present dans les Paupiettes de poulet?",
+  quizz_id: quizz2.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "levure chimique",
+  good_not_good: false,
+  question_id: question4.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "basilic",
+  good_not_good: false,
+  question_id: question4.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "parmsean",
+  good_not_good: false,
+  question_id: question4.id
+})
+
+answer1 = Answer.create!({
+  proposition: "blancs de poulet",
+  good_not_good: true,
+  question_id: question4.id
+})
+
+#///////////////////////////////////////
+
+question5 = Question.create!({
+  sujet: "Quel ingredient est present dans le Taboulé?",
+  quizz_id: quizz2.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "courgette",
+  good_not_good: false,
+  question_id: question5.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "oignon",
+  good_not_good: false,
+  question_id: question5.id
+})
+
+answer1 = Answer.create!({
+  proposition: "roquette",
+  good_not_good: true,
+  question_id: question5.id
+})
+
+answer4 = Answer.create!({
+  proposition: "poivron jaune",
+  good_not_good: false,
+  question_id: question5.id
+})
+
+#//////////////////////////////
+
+question6 = Question.create!({
+  sujet: "Quel ingredient est present dans les Pennes aux légumes?",
+  quizz_id: quizz2.id
+})
+
+
+
+answer1 = Answer.create!({
+  proposition: "aubergine",
+  good_not_good: true,
+  question_id: question6.id
+})
+
+
+
+answer2 = Answer.create!({
+  proposition: "tomates séchées",
+  good_not_good: false,
+  question_id: question6.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "olives noires",
+  good_not_good: false,
+  question_id: question6.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "mozzarella",
+  good_not_good: false,
+  question_id: question6.id
+})
+
+#////////////////////////////////
+
+question7 = Question.create!({
+  sujet: "Quel ingredient est present dans le Millefeuille?",
+  quizz_id: quizz2.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "courgettes",
+  good_not_good: false,
+  question_id: question7.id
+})
+
+answer1 = Answer.create!({
+  proposition: "mozzarella ",
+  good_not_good: true,
+  question_id: question7.id
+})
+
+answer3 = Answer.create!({
+  proposition: "oeuf",
+  good_not_good: false,
+  question_id: question7.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "carotte",
+  good_not_good: false,
+  question_id: question7.id
+})
+
+#////////////////////////////////////////
+
+question8 = Question.create!({
+  sujet: "Quel ingredient est present dans les Courgettes frites?",
+  quizz_id: quizz2.id
+})
+
+
+
+
+answer2 = Answer.create!({
+  proposition: "mozzarella ",
+  good_not_good: false,
+  question_id: question8.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "basilic",
+  good_not_good: false,
+  question_id: question8.id
+})
+
+answer1 = Answer.create!({
+  proposition: "oeuf",
+  good_not_good: true,
+  question_id: question8.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "huile d'olive",
+  good_not_good: false,
+  question_id: question8.id
+})
+
+#/////////////////////////////////
+
+question9 = Question.create!({
+  sujet: "Quel ingredient est present dans les Cannelloni épinards et ricotta?",
+  quizz_id: quizz2.id
+})
+
+
+
+answer2 = Answer.create!({
+  proposition: "artichauts violets",
+  good_not_good: false,
+  question_id: question9.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "citrons jaunes",
+  good_not_good: false,
+  question_id: question9.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "parmigiano",
+  good_not_good: false,
+  question_id: question9.id
+})
+
+answer1 = Answer.create!({
+  proposition: "épinard",
+  good_not_good: true,
+  question_id: question9.id
+})
+
+#///////////////////////////////
+
+question10 = Question.create!({
+  sujet: "Quel ingredient est present dans les Artichauts à l'italienne?",
+  quizz_id: quizz2.id
+})
+
+
+
+answer1 = Answer.create!({
+  proposition: "basilic",
+  good_not_good: true,
+  question_id: question10.id
+})
+
+
+
+answer2 = Answer.create!({
+  proposition: "lait",
+  good_not_good: false,
+  question_id: question10.id
+})
+
+
+answer3 = Answer.create!({
+  proposition: "muscade",
+  good_not_good: false,
+  question_id: question10.id
+})
+
+
+answer4 = Answer.create!({
+  proposition: "parmigiano",
+  good_not_good: false,
+  question_id: question10.id
+})
+
+#////////////////////////////////////////
+# user3 = User.create!({
+#   name: "paul",
+#   email: "paul1940@dayrep.com",
+#   password: "12345678"
+# })
+
+
+# quizz3 = Quizz.create!({
+#   theme: "Française"
+# })
+
+
+
+
+
+#///////////////////////////////////////
+
+
+# user4 = User.create!({
+#   name: "paul",
+#   email: "paul1940@dayrep.com",
+#   password: "12345678"
+# })
+
+
+# quizz4 = Quizz.create!({
+#   theme: "Française"
+# })
+
+
+
+
 
 #///////////////////////////////////////
