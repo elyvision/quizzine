@@ -5,7 +5,7 @@
 
 <ul>
   <% @quizzs.each do |quizz| %>
-    <li><%= link_to quizz.theme, quizz_question_path(quizz.id, 1) %></li>
+    <li><%= link_to quizz.theme, quizz_path(quizz) %></li>
   <% end %>
 </ul>
 

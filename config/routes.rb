@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  resources :quizzs, only: [:index]
-  resources :questions, only: [:show]
+  resources :quizzs, only: [:index, :show] do
+    resources :questions, only: [:show]
+  end
 
   # resources :questions, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   # resources :answers, only: [:index, :show, :new, :create, :edit, :update, :destroy]

@@ -1,1 +1,17 @@
-<h1>Page de jeu</h1>
+<h1> Page de Jeux </h1>
+
+
+<h1><%= @quizz.theme %></h1>
+<h3><%= @question.sujet %></h3>
+
+
+<!-- je veux pouvoir cliquer sur chaque proposition -->
+<!-- Je veux que pour un clique -->
+<!-- le bouton renvois non pas une page mais vrais ou faux -->
+<!-- si il renvois vrais mes point =+ 1 -->
+<!-- s'il renvois faut mes poit =+ 0 -->
+
+<%= simple_form_for @answer_user do |f| %>
+  <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons %>
+  <%= f.submit %>
+<% end %>
