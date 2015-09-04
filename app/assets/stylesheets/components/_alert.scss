@@ -7,9 +7,9 @@
   text-align: center;
   color: white;
   &-info {
-    background: $green;
+    background: $brand-success;
   }
   &-warning {
-    background: $red;
+    background: $brand-danger;
   }
 }

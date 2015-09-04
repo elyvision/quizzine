@@ -3,9 +3,16 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-root 'home#index'
+  resources :quizzs, only: [:index, :show] do
+    resources :questions, only: [:show]
+  end
+
+  # resources :questions, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  # resources :answers, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :answer_users, only: [:create]
 
 
+  root 'quizzs#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
