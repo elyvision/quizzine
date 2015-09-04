@@ -12,10 +12,15 @@
 #2 Quiz  *1
 #3 Questions  *4
 #4 Answer
+AnswerUser.destroy_all
+User.destroy_all
+Quizz.destroy_all
+Question.destroy_all
+Answer.destroy_all
 
 user1 = User.create!({
-  name: "Elie",
-  email: "elie.marot@gmail.com",
+  name: "Michelle",
+  email: "michelle.marot@gmail.com",
   password: "12345678"
 })
 puts "created #{user1.name}"

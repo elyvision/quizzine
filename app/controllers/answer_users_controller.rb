@@ -1,13 +1,11 @@
 class AnswerUsersController < ApplicationController
   def create
-    @answer_user = AnswerUser.new # pourquoi ne pas mettre cette ligne dans def new?
-                                            #/answer_users(.:format)
+    @answer_user = AnswerUser.new
     @answer_user.answer = Answer.find(params[:answer_user][:answer_id])
     @answer_user.user = current_user
     @question = @answer_user.answer.question
     @quizz = @question.quizz
     if @answer_user.save
-      # je ne comprend pas la formule de redirrection
       compute_score(@answer_user)
       session[@quizz.theme.to_sym]["questions_done"] << @question.id
       session[:counter] += 1

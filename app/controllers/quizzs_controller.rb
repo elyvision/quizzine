@@ -4,16 +4,18 @@ class QuizzsController < ApplicationController
 
 
   def index
+    # Elie : Rendre disponible l'ensemble des resources pour une partie
     @quizzs = Quizz.all
     session[:score] = 0
-    session[:counter] == 0
+    session[:counter] = 0
 
   end
 
   def show
     # MAX TROUVER DANS TOUTES LES QUESTIONS DU QUIZZ UNE QUESTION PAS DEJA FAITES
-    select_random_question
-    @answers = @question.answers
+    @question = select_random_question
+    @answers = @question.answers # je veux afficher les answers de la question ci dessu
+    # Elie dans cette vue le joueur va cree la reponse à la question
     @answer_user = AnswerUser.new
   end
 
@@ -46,9 +48,9 @@ class QuizzsController < ApplicationController
   end
 
   def select_random_question
-    # MAX 1ere question je écupere tous les ids / questions suivantes je connais deja les ids donc pas besoin de faire une requete
+    # MAX 1ere question je récupere tous les ids / questions suivantes je connais deja les ids donc pas besoin de faire une requete
     if session[:counter] == 0
-      session[@quizz.theme.to_sym] = {}
+      session[@quizz.theme.to_sym] = {} # creation
       session[@quizz.theme.to_sym]["quizz_questions"] = @quizz.questions.map {|question| question.id}
       session[@quizz.theme.to_sym]["questions_done"] = []
       @quizz_questions = session[@quizz.theme.to_sym]["quizz_questions"]
@@ -57,7 +59,10 @@ class QuizzsController < ApplicationController
     else
       @quizz_questions = session[@quizz.theme.to_sym]["quizz_questions"]
       @done_questions = session[@quizz.theme.to_sym]["questions_done"]
-      @questions_to_do = @quizz_questions.select { |question | question.exclude?(@done_questions)}
+      @questions_to_do = @quizz_questions
+      @done_questions.each do |done_question|
+        @questions_to_do.delete(done_question)
+      end
     end
 
     @random_question_id = @questions_to_do.sample
