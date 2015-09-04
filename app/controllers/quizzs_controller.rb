@@ -65,6 +65,17 @@ class QuizzsController < ApplicationController
       end
     end
 
+#     case num
+# when 1
+#   puts 'one'
+# when 2
+#   puts 'two'
+# when 42
+#   puts 'the answer!'
+# else
+#   puts 'nope'
+# end
+
     @random_question_id = @questions_to_do.sample
     @question = Question.find(@random_question_id.to_i)
   end
