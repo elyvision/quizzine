@@ -23,7 +23,8 @@ class AnswerUsersController < ApplicationController
 
   def compute_score(answer_user)
     if answer_user.answer == true
-      session[:score] += 1
+      @score += 1
+    else @score = @score
     end
   end
 end

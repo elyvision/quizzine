@@ -3,6 +3,7 @@
 
 <h1><%= @quizz.theme %></h1>
 <h3><%= @question.sujet %></h3>
+<h3><%= @score %></h3>
 
 
 <!-- je veux pouvoir cliquer sur chaque proposition -->
@@ -15,3 +16,6 @@
   <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons %>
   <%= f.submit %>
 <% end %>
+
+<div data-countdown-until="<%#= (180 * SECOND).from_now %>"></div>
+<!-- <div data-countdown-until="<%#= X .days.from_now %>"></div> -->

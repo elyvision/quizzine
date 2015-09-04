@@ -6,7 +6,7 @@ class QuizzsController < ApplicationController
   def index
     # Elie : Rendre disponible l'ensemble des resources pour une partie
     @quizzs = Quizz.all
-    session[:score] = 0
+    @score = session[:score] = 0
     session[:counter] = 0
 
   end
@@ -14,26 +14,14 @@ class QuizzsController < ApplicationController
   def show
     # MAX TROUVER DANS TOUTES LES QUESTIONS DU QUIZZ UNE QUESTION PAS DEJA FAITES
     @question = select_random_question
-    @answers = @question.answers # je veux afficher les answers de la question ci dessu
-    # Elie dans cette vue le joueur va cree la reponse à la question
-    @answer_user = AnswerUser.new
-  end
-
-
-  def new
-
-  end
-
-  def create
-
-  end
-
-  def update
-
-  end
-
-  def delete
-
+    if @question.nil?
+      redirect_to quizzs_path
+    else
+      @answers = @question.answers # je veux afficher les answers de la question ci dessu
+      # Elie dans cette vue le joueur va cree la reponse à la question
+      @answer_user = AnswerUser.new
+      @score = session[:score]
+    end
   end
 
 
@@ -58,26 +46,16 @@ class QuizzsController < ApplicationController
       @questions_to_do = @quizz_questions
     else
       @quizz_questions = session[@quizz.theme.to_sym]["quizz_questions"]
-      @done_questions = session[@quizz.theme.to_sym]["questions_done"]
       @questions_to_do = @quizz_questions
+      @done_questions = session[@quizz.theme.to_sym]["questions_done"]
       @done_questions.each do |done_question|
         @questions_to_do.delete(done_question)
       end
     end
-
-#     case num
-# when 1
-#   puts 'one'
-# when 2
-#   puts 'two'
-# when 42
-#   puts 'the answer!'
-# else
-#   puts 'nope'
-# end
-
-    @random_question_id = @questions_to_do.sample
-    @question = Question.find(@random_question_id.to_i)
+    if @questions_to_do.any?
+      @random_question_id = @questions_to_do.sample
+      @question = Question.find(@random_question_id.to_i)
+    end
   end
 
 
