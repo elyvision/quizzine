@@ -14,6 +14,7 @@ class QuizzsController < ApplicationController
   def show
     # MAX TROUVER DANS TOUTES LES QUESTIONS DU QUIZZ UNE QUESTION PAS DEJA FAITES
     @question = select_random_question
+
     if @question.nil?
       redirect_to quizzs_path
     else
@@ -35,6 +36,7 @@ class QuizzsController < ApplicationController
     params.require(:quizz).permit(:theme)
   end
 
+
   def select_random_question
     # MAX 1ere question je récupere tous les ids / questions suivantes je connais deja les ids donc pas besoin de faire une requete
     if session[:counter] == 0
@@ -49,7 +51,7 @@ class QuizzsController < ApplicationController
       @questions_to_do = @quizz_questions
       @done_questions = session[@quizz.theme.to_sym]["questions_done"]
       @done_questions.each do |done_question|
-        @questions_to_do.delete(done_question)
+      @questions_to_do.delete(done_question)
       end
     end
     if @questions_to_do.any?

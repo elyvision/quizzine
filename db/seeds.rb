@@ -12,6 +12,10 @@
 #2 Quiz  *1
 #3 Questions  *4
 #4 Answer
+require 'open-uri'
+require 'nokogiri'
+
+
 AnswerUser.destroy_all
 User.destroy_all
 Quizz.destroy_all
@@ -736,6 +740,47 @@ answer4 = Answer.create!({
 })
 
 #////////////////////////////////////////
+
+# scrapping de quizz_biz
+
+html_file =
+open("http://www.quizz.biz/quizz-869119.html")
+html_doc = Nokogiri::HTML(html_file)
+questions_ids =[]
+html_doc.search('.question').each do |question|
+  question_text = question.text.match(/(..\..)(.+)/)
+
+
+  created_question = Question.create!({
+    sujet: question_text[2],
+    quizz_id: quizz1.id
+  })
+  questions_ids << created_question.id
+
+
+end
+
+group_id = questions_ids[0]
+html_doc.search('.reponses').each_slice(3) do |group|
+  group.each do |reponse|
+    answer_text = reponse.text.match(/(...)(.+)/)
+
+    Answer.create!({
+      proposition: answer_text[2],
+      good_not_good: false,
+      question_id: group_id
+    })
+  end
+  group_id += 1
+end
+
+
+
+
+
+
+
+
 # user3 = User.create!({
 #   name: "paul",
 #   email: "paul1940@dayrep.com",
