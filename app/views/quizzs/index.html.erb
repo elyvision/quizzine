@@ -1,13 +1,49 @@
-<div>
-  <h1>Dans quelle catégorie étés vous incollable?</h1>
-</div>
 
 
-<ul>
-  <% @quizzs.each do |quizz| %>
-    <li><%= link_to quizz.theme, quizz_path(quizz) %></li>
-  <% end %>
-</ul>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9 col-md-offset-3 first-card">
+        <div classe="second-card">
+           <h2>Dans quelle catégorie étés vous incollable?</h2>
+        </div>
+        <div class="fird-card">
+          <ul>
+            <% @quizzs.each do |quizz| %>
+              <li><%= link_to quizz.theme, quizz_path(quizz) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!--   <div class="container">
+    <div class="row">
+      <div class="col-xs-9 col-md-offset-3 first-card">
+        <div classe="second-card">
+           <h2>Dans quelle catégorie étés vous incollable?</h2>
+        </div>
+        <div class="fird-card">
+          <ul>
+            <% @quizzs.each do |quizz| %>
+              <li><%= link_to quizz.theme, quizz_path(quizz) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
 
 
 
