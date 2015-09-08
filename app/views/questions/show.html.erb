@@ -1,13 +1,38 @@
-<h1> Page de Jeux </h1>
+<h1> Quizzine </h1>
 
 
-<h1><%= @question.quizz.theme %></h1>
-<h3><%= @question.sujet %></h3>
-<h3><%= @score %></h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 card">
+      <h1><%= @question.quizz.theme %></h1>
+      <h3><%= @question.sujet %></h3>
+      <h3><%= @score %></h3>
+        <%= simple_form_for @answer_user do |f| %>
+          <div class="col-md-6">
+            <div class="card">
+               <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons %>
+                <%= f.submit %>
+                <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--           <% @quizzs.each do |quizz| %>
+              <div class="col-md-6">
+                <div class="card">
+                  <%= link_to quizz.theme, quizz_path(quizz) %>
+                </div>
+              </div>
+            <% end %>
+      </div>
+    </div>
+  </div>
+ -->
 
 
 
-<%= simple_form_for @answer_user do |f| %>
-  <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons %>
-  <%= f.submit %>
-<% end %>

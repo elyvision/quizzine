@@ -1,18 +1,28 @@
-<h1> Page de Jeux </h1>
-
-
-<h1><%= @quizz.theme %></h1>
-<h3><%= @score %></h3>
-<h3><%= @question.sujet %></h3>
 
 
 
-<%= simple_form_for @answer_user do |f| %>
-  <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons %>
-  <%= f.submit %>
-<% end %>
-
-<!-- #/////////////////////// -->
 
 
 
+
+<div class="container padded">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="first-card">
+          <div class= "title-card">
+            <h1> Quizzine <%= @question.quizz.theme %> </h1>
+          </div>
+        <div class="question-show-quizz">
+          <h3><%= @question.sujet %></h3>
+          <h3><%= @score %> ptz </h3>
+        </div>
+        <div id="answer-show-quizz">
+          <%= simple_form_for @answer_user do |f| %>
+                 <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons, label: "Votre réponse" %>
+                  <div id="answer-btn"><%= f.submit "confirmer", :class => "btn btn-success"%></div>
+          <% end %>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
