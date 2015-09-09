@@ -371,11 +371,11 @@ answer4 = Answer.create!({
 #ITALIENNE
 
 #////////////////////////////////////
-# user2 = User.create!({
-#   name: "Wilsock",
-#   email: "Wilsock1940@armyspy.com",
-#   password: "12345678"
-# })
+user2 = User.create!({
+  name: "Wilsock",
+  email: "Wilsock1940@armyspy.com",
+  password: "12345678"
+})
 
 
 quizz2 = Quizz.create!({
@@ -781,11 +781,11 @@ end
 
 
 
-# user3 = User.create!({
-#   name: "paul",
-#   email: "paul1940@dayrep.com",
-#   password: "12345678"
-# })
+user3 = User.create!({
+  name: "emile",
+  email: "paul1941@dayrep.com",
+  password: "12345678"
+})
 
 
 # quizz3 = Quizz.create!({
@@ -799,11 +799,11 @@ end
 #///////////////////////////////////////
 
 
-# user4 = User.create!({
-#   name: "paul",
-#   email: "paul1940@dayrep.com",
-#   password: "12345678"
-# })
+user4 = User.create!({
+  name: "paul",
+  email: "paul1940@dayrep.com",
+  password: "12345678"
+})
 
 
 # quizz4 = Quizz.create!({

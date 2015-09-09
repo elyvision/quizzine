@@ -6,17 +6,15 @@ class QuizzsController < ApplicationController
   def index
     # Elie : Rendre disponible l'ensemble des resources pour une partie
     @quizzs = Quizz.all
-    @score = session[:score] = 0
+    session[:score] = 0
     session[:counter] = 0
-
   end
 
   def show
     # MAX TROUVER DANS TOUTES LES QUESTIONS DU QUIZZ UNE QUESTION PAS DEJA FAITES
     @question = select_random_question
-
     if @question.nil?
-      redirect_to quizzs_path
+      redirect_to users_path
     else
       @answers = @question.answers # je veux afficher les answers de la question ci dessu
       # Elie dans cette vue le joueur va cree la reponse à la question

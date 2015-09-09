@@ -1,0 +1,51 @@
+<!-- vue : Users Records -->
+
+
+  <div class="container text-center padded">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 first-card">
+          <div>
+            <h3 class= "title-card" id="title-index-user"> Classement</h3>
+          </div>
+          <div class="question-show-quizz">
+            <p>Félicitation, votre score est de <%= @score %> points</p>
+            <p>Inscrivez vous pour cumulez vos points et tenter de gagner des repas dans les meilleures restaurant ! </p>
+          </div>
+            <div>
+            <% if user_signed_in? %>
+              <li>
+              <%= link_to('Deconection', destroy_user_session_path, :method => :delete, class: "btn btn-danger" ) %>
+              </li>
+            <% else %>
+              <li>
+              <%= link_to('Connection', new_user_session_path, class: "btn btn-success")  %>
+              </li>
+            <% end %>
+          </div>
+
+          <div id="answer-show-quizz">
+            <p>Le tableau des High Score!</p>
+            <ul>
+              <% @users.each do |user| %>
+                <li><%= user.name %> <%= user.total_score %></li>
+              <% end %>
+            </ul>
+          </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+

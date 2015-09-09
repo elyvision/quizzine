@@ -1,4 +1,5 @@
 class AnswerUsersController < ApplicationController
+
   def create
     @answer_user = AnswerUser.new
     @answer_user.answer = Answer.find(params[:answer_user][:answer_id])
@@ -22,9 +23,8 @@ class AnswerUsersController < ApplicationController
   end
 
   def compute_score(answer_user)
-    if answer_user.answer == true
-      @score += 1
-    else @score = @score
+    if answer_user.answer.good_not_good == true
+      session[:score] += 1
     end
   end
 end
