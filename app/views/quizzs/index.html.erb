@@ -1,13 +1,67 @@
-<div>
-  <h1>Dans quelle catégorie étés vous incollable?</h1>
-</div>
+<!-- selection des quizz -->
 
 
-<ul>
-  <% @quizzs.each do |quizz| %>
-    <li><%= link_to quizz.theme, quizz_path(quizz) %></li>
-  <% end %>
-</ul>
+  <div class="container text-center padded">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 first-card">
+
+          <h3 class= "title-card" id="title-index-quizz">Dans quelle catégorie étés vous incollable?</h3>
+
+            <% @quizzs.each do |quizz| %>
+              <div class="col-md-6">
+                <div class="plate">
+                  <%= link_to quizz.theme, quizz_path(quizz) %>
+                </div>
+              </div>
+            <% end %>
+             <div>
+            <% if user_signed_in? %>
+              <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-danger") %>
+              </li>
+            <% else %>
+              <li>
+              <%= link_to('Login', new_user_session_path, class: "btn btn-success")  %>
+              </li>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!--   <div class="container first-card">
+    <div class="row">
+      <div class="col-xs-9 col-md-offset-3 ">
+        <div class="container second-card">
+         <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h2>Dans quelle catégorie étés vous incollable?</h2>
+          </div>
+        </div>
+        </div>
+        <div class="container fird-card">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <ul>
+                <% @quizzs.each do |quizz| %>
+                <li><%= link_to quizz.theme, quizz_path(quizz) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
 
 
 
