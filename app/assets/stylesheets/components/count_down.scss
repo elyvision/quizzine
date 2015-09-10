@@ -1,0 +1,17 @@
+.countdown{
+  height: 70px;
+}
+.countdown .digit{
+  height: 70px;
+  width: 70px;
+  font-family: 'Courier New', Courier;
+  font-size: 70px;
+  line-height: 74px;
+  border-radius: 10px;
+  background: #a90329;
+  background: -webkit-linear-gradient(top,
+    #a90329 0%,
+    #a90329 53%,
+    #8f0222 53%,
+    #6d0019 100%);
+}

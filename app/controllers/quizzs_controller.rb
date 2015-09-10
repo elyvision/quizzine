@@ -20,6 +20,7 @@ class QuizzsController < ApplicationController
       # Elie dans cette vue le joueur va cree la reponse à la question
       @answer_user = AnswerUser.new
       @score = session[:score]
+
     end
   end
 

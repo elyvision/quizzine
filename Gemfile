@@ -1,6 +1,8 @@
 ruby '2.2.3'
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery-countdown'
+end
 
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
