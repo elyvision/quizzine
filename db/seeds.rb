@@ -368,7 +368,10 @@ answer4 = Answer.create!({
   question_id: question6.id
 })
 #////////////////////////////
+
+
 #ITALIENNE
+
 
 #////////////////////////////////////
 user2 = User.create!({
@@ -561,183 +564,183 @@ answer4 = Answer.create!({
 
 #//////////////////////////////
 
-question6 = Question.create!({
-  sujet: "Quel ingredient est present dans les Pennes aux légumes?",
-  quizz_id: quizz2.id
-})
+# question6 = Question.create!({
+#   sujet: "Quel ingredient est present dans les Pennes aux légumes?",
+#   quizz_id: quizz2.id
+# })
 
 
 
-answer1 = Answer.create!({
-  proposition: "aubergine",
-  good_not_good: true,
-  question_id: question6.id
-})
+# answer1 = Answer.create!({
+#   proposition: "aubergine",
+#   good_not_good: true,
+#   question_id: question6.id
+# })
 
 
 
-answer2 = Answer.create!({
-  proposition: "tomates séchées",
-  good_not_good: false,
-  question_id: question6.id
-})
+# answer2 = Answer.create!({
+#   proposition: "tomates séchées",
+#   good_not_good: false,
+#   question_id: question6.id
+# })
 
 
-answer3 = Answer.create!({
-  proposition: "olives noires",
-  good_not_good: false,
-  question_id: question6.id
-})
+# answer3 = Answer.create!({
+#   proposition: "olives noires",
+#   good_not_good: false,
+#   question_id: question6.id
+# })
 
 
-answer4 = Answer.create!({
-  proposition: "mozzarella",
-  good_not_good: false,
-  question_id: question6.id
-})
+# answer4 = Answer.create!({
+#   proposition: "mozzarella",
+#   good_not_good: false,
+#   question_id: question6.id
+# })
 
 #////////////////////////////////
 
-question7 = Question.create!({
-  sujet: "Quel ingredient est present dans le Millefeuille?",
-  quizz_id: quizz2.id
-})
+# question7 = Question.create!({
+#   sujet: "Quel ingredient est present dans le Millefeuille?",
+#   quizz_id: quizz2.id
+# })
 
 
 
 
-answer2 = Answer.create!({
-  proposition: "courgettes",
-  good_not_good: false,
-  question_id: question7.id
-})
+# answer2 = Answer.create!({
+#   proposition: "courgettes",
+#   good_not_good: false,
+#   question_id: question7.id
+# })
 
-answer1 = Answer.create!({
-  proposition: "mozzarella ",
-  good_not_good: true,
-  question_id: question7.id
-})
+# answer1 = Answer.create!({
+#   proposition: "mozzarella ",
+#   good_not_good: true,
+#   question_id: question7.id
+# })
 
-answer3 = Answer.create!({
-  proposition: "oeuf",
-  good_not_good: false,
-  question_id: question7.id
-})
+# answer3 = Answer.create!({
+#   proposition: "oeuf",
+#   good_not_good: false,
+#   question_id: question7.id
+# })
 
 
-answer4 = Answer.create!({
-  proposition: "carotte",
-  good_not_good: false,
-  question_id: question7.id
-})
+# answer4 = Answer.create!({
+#   proposition: "carotte",
+#   good_not_good: false,
+#   question_id: question7.id
+# })
 
 #////////////////////////////////////////
 
-question8 = Question.create!({
-  sujet: "Quel ingredient est present dans les Courgettes frites?",
-  quizz_id: quizz2.id
-})
+# question8 = Question.create!({
+#   sujet: "Quel ingredient est present dans les Courgettes frites?",
+#   quizz_id: quizz2.id
+# })
 
 
 
 
-answer2 = Answer.create!({
-  proposition: "mozzarella ",
-  good_not_good: false,
-  question_id: question8.id
-})
+# answer2 = Answer.create!({
+#   proposition: "mozzarella ",
+#   good_not_good: false,
+#   question_id: question8.id
+# })
 
 
-answer3 = Answer.create!({
-  proposition: "basilic",
-  good_not_good: false,
-  question_id: question8.id
-})
+# answer3 = Answer.create!({
+#   proposition: "basilic",
+#   good_not_good: false,
+#   question_id: question8.id
+# })
 
-answer1 = Answer.create!({
-  proposition: "oeuf",
-  good_not_good: true,
-  question_id: question8.id
-})
+# answer1 = Answer.create!({
+#   proposition: "oeuf",
+#   good_not_good: true,
+#   question_id: question8.id
+# })
 
 
-answer4 = Answer.create!({
-  proposition: "huile d'olive",
-  good_not_good: false,
-  question_id: question8.id
-})
+# answer4 = Answer.create!({
+#   proposition: "huile d'olive",
+#   good_not_good: false,
+#   question_id: question8.id
+# })
 
 #/////////////////////////////////
 
-question9 = Question.create!({
-  sujet: "Quel ingredient est present dans les Cannelloni épinards et ricotta?",
-  quizz_id: quizz2.id
-})
+# question9 = Question.create!({
+#   sujet: "Quel ingredient est present dans les Cannelloni épinards et ricotta?",
+#   quizz_id: quizz2.id
+# })
 
 
 
-answer2 = Answer.create!({
-  proposition: "artichauts violets",
-  good_not_good: false,
-  question_id: question9.id
-})
+# answer2 = Answer.create!({
+#   proposition: "artichauts violets",
+#   good_not_good: false,
+#   question_id: question9.id
+# })
 
 
-answer3 = Answer.create!({
-  proposition: "citrons jaunes",
-  good_not_good: false,
-  question_id: question9.id
-})
+# answer3 = Answer.create!({
+#   proposition: "citrons jaunes",
+#   good_not_good: false,
+#   question_id: question9.id
+# })
 
 
-answer4 = Answer.create!({
-  proposition: "parmigiano",
-  good_not_good: false,
-  question_id: question9.id
-})
+# answer4 = Answer.create!({
+#   proposition: "parmigiano",
+#   good_not_good: false,
+#   question_id: question9.id
+# })
 
-answer1 = Answer.create!({
-  proposition: "épinard",
-  good_not_good: true,
-  question_id: question9.id
-})
+# answer1 = Answer.create!({
+#   proposition: "épinard",
+#   good_not_good: true,
+#   question_id: question9.id
+# })
 
 #///////////////////////////////
 
-question10 = Question.create!({
-  sujet: "Quel ingredient est present dans les Artichauts à l'italienne?",
-  quizz_id: quizz2.id
-})
+# question10 = Question.create!({
+#   sujet: "Quel ingredient est present dans les Artichauts à l'italienne?",
+#   quizz_id: quizz2.id
+# })
 
 
 
-answer1 = Answer.create!({
-  proposition: "basilic",
-  good_not_good: true,
-  question_id: question10.id
-})
+# answer1 = Answer.create!({
+#   proposition: "basilic",
+#   good_not_good: true,
+#   question_id: question10.id
+# })
 
 
 
-answer2 = Answer.create!({
-  proposition: "lait",
-  good_not_good: false,
-  question_id: question10.id
-})
+# answer2 = Answer.create!({
+#   proposition: "lait",
+#   good_not_good: false,
+#   question_id: question10.id
+# })
 
 
-answer3 = Answer.create!({
-  proposition: "muscade",
-  good_not_good: false,
-  question_id: question10.id
-})
+# answer3 = Answer.create!({
+#   proposition: "muscade",
+#   good_not_good: false,
+#   question_id: question10.id
+# })
 
 
-answer4 = Answer.create!({
-  proposition: "parmigiano",
-  good_not_good: false,
-  question_id: question10.id
-})
+# answer4 = Answer.create!({
+#   proposition: "parmigiano",
+#   good_not_good: false,
+#   question_id: question10.id
+# })
 
 #////////////////////////////////////////
 
