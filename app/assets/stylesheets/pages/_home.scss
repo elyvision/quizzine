@@ -2,6 +2,52 @@
  * SASS code SPECIFIC TO your home page
  * (margin/padding adjustments, background image, etc..)
  * ------------------------------------- */
- body{
-  background-color: D6D1B1;
- }
+
+@keyframes colorLoop {
+  0%   {
+    fill: #f46b45;
+  }
+  5%   {
+    fill: yellow;
+  }
+  100%   {
+    fill: #f46b45;
+  }
+}
+
+#marmiton {
+  position: relative;
+  width: 170px;
+  // path {
+  //   fill: #f46b45;
+  //   animation: colorLoop 3s;
+  //   -moz-animation: colorLoop 3s; /* Firefox */
+  //   -webkit-animation: colorLoop 3s; /* Safari and Chrome */
+  // }
+}
+
+.marmiton-card {
+  background: white;
+  padding: 20px;
+  border-radius: 4px 4px 0 0;
+}
+
+.marmiton-prefix {
+  font-size: 26px;
+  position: relative;
+  bottom: 4px;
+  right: 6px;
+  font-weight: 300;
+}
+
+
+.label-score {
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 5px;
+  right: -16px;
+}
+
+
+

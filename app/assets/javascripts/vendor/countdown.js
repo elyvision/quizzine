@@ -1,12 +1,15 @@
 $(document).ready(function() {
+  $("input[type='radio']:eq(0)").prop("checked", true);
+
+
   $('#timer').countdown({
-    digits: 5,
-    number: 5000,
-    duration: 5000,
+    digits: 4,
+    number: 10000,
+    duration: 10000,
     animateTo: 0
   }).on('countdown:finished', function(event, data){
-    $('form').submit();
-  });;
+      $('form').submit();
+  });
 });
 
 

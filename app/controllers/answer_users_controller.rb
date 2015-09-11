@@ -6,28 +6,25 @@ class AnswerUsersController < ApplicationController
     # on execute le boue de code
 
     # Il faut permettre l'enregistrement de la reponse même si elle est vide
-  if params[:answer_user] # veut dire si les params  de la reponse sont present
-    @answer_user = AnswerUser.new
-    @answer_user.answer = Answer.find(params[:answer_user][:answer_id])
-    @answer_user.user = current_user
-    @question = @answer_user.answer.question
-    @quizz = @question.quizz
+    if params[:answer_user] # veut dire si les params  de la reponse sont present
+      @answer_user = AnswerUser.new
+      @answer_user.answer = Answer.find(params[:answer_user][:answer_id])
+      @answer_user.user = current_user
+      @question = @answer_user.answer.question
+      @quizz = @question.quizz
 
-    if @answer_user.save # si la reponse de l'utilisateur est sauvegardée.
-      compute_score(@answer_user)
-      session[@quizz.theme.to_sym]["questions_done"] << @question.id
-      session[:counter] += 1
-      redirect_to quizz_path(@quizz)
+      if @answer_user.save # si la reponse de l'utilisateur est sauvegardée.
+        compute_score(@answer_user)
+        session[@quizz.theme.to_sym]["questions_done"] << @question.id
+        session[:counter] += 1
+        redirect_to quizz_path(@quizz)
+      else
+        redirect_to question_path(@answer_user.answer.question)
+      end
     else
-      redirect_to question_path(@answer_user.answer.question)
+      redirect_to users_path
     end
   end
-
-  else
-    redirect_to quizzs_path
-  end
-
-
 
   private
 

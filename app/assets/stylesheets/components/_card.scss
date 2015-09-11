@@ -1,10 +1,10 @@
 
 
 .first-card {
-background: rgba(0,0,0,0.3);
-border-radius: 5px;
-height: 582pxpx;
-padding: 10px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 5px;
+  height: 582pxpx;
+  padding: 25px;
 }
 
 .plate {
@@ -27,27 +27,24 @@ padding: 10px;
 
 }
 
+.title-card {
+  color: #FFFFFF;
+  font-size: 23px;
+  padding: 19px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.title-card h1{
+  margin:0px auto;
+  font-size: 25px;
+}
 
-  .title-card {
-    position: absolute;
-    right: -100px;
-    top: 30px;
-    display: inline-block;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-  background: linear-gradient(90deg, #D4D33C 10%, rgba(35, 189, 56, 0.78) 90%);
-  }
-  .title-card h1{
-    margin:0px auto;
-  }
-
-  #title-index-quizz {
-    position: relative;
-    right: -72px;
-    top: 4px
-  }
+#title-index-quizz {
+  position: relative;
+  right: 0px;
+  top: 4px
+}
 
   // #title-show-quizz {
   //   position: relative;
@@ -60,25 +57,35 @@ padding: 10px;
   }
 
 
-  .question-show-quizz {
-  margin-top: 150px;
-  height: 200px;
+.question-show-quizz {
+  color: white;
+  text-align: center;
+  h3 {
+    font-size: 21px;
+    line-height: 36px;
+    font-weight: 100;
+    padding: 0 100px;
+  }
 }
 
   #answer-show-quizz {
-  background: rgba(0,0,0,0.3);
-  border-radius: 5px;
-  padding:10px;
-  margin: 0px auto;
-  width: 50%;
-  height:200px;
-  position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 25px;
+    margin: 50px auto;
+    width: 65%;
+    /* height: 200px; */
+    /* position: relative; */
+    color: white;
+    font-size: 19px;
   }
 
   #answer-btn{
-  position: absolute;
-  bottom:10px;
-  text-align:center;
+    /* position: absolute; */
+    /* bottom: 10px; */
+    /* text-align: center; */
+    /* left: 50%; */
+    width: 100%;
   }
 
 // .fird-card {

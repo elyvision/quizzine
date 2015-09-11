@@ -2,19 +2,20 @@
 
 <div class="container padded">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3 marmiton-card text-center">
+      <span class="marmiton-prefix">Cuisine <%= @question.quizz.theme %> <strong>from</strong></span> <%= render "shared/marmiton" %> <span class="label label-success label-score"><%= @score %> pts</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" style="padding: 0;">
       <div class="first-card">
-          <div class= "title-card">
-            <h1> Quizzine <%= @question.quizz.theme %> </h1>
-          </div>
         <div class="question-show-quizz">
           <h3><%= @question.sujet %></h3>
-          <h3><%= @score %> pts </h3>
         </div>
         <div id="answer-show-quizz">
           <%= simple_form_for @answer_user do |f| %>
-                 <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons, label: "Votre réponse" %>
-                  <div id="answer-btn"><%= f.submit "confirmer", :class => "btn btn-success"%></div>
+            <%= f.input :answer_id, collection: @answers.map { |answer| [answer.proposition, answer.id] }, as: :radio_buttons, label: "Votre réponse", :checked => @answers.first %>
+            <div id="answer-btn"><%= f.submit "confirmer", :class => "btn btn-danger"%></div>
           <% end %>
         </div>
         <div class="countdown" id="timer"></div>

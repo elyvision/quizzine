@@ -389,48 +389,46 @@ quizz2 = Quizz.create!({
 #////////////////////////////////////
 
 question1 = Question.create!({
-  sujet: "Quel ingredient est present dans les Endives au jambon?",
+  sujet: "Quel ingredient y-a-il dans l'Osso Buco ?",
   quizz_id: quizz2.id
 })
 
 
-
-
 answer2 = Answer.create!({
-  proposition: "filet de poulet",
+  proposition: "du boeuf",
   good_not_good: false,
   question_id: question1.id
 })
 
 answer1 = Answer.create!({
-  proposition: "jambon blanc",
+  proposition: "du veau",
   good_not_good: true,
   question_id: question1.id
 })
 
 answer3 = Answer.create!({
-  proposition: "mozzarella",
+  proposition: "du poulet",
   good_not_good: false,
   question_id: question1.id
 })
 
 
 answer4 = Answer.create!({
-  proposition: "tomate ",
+  proposition: "du porc",
   good_not_good: false,
   question_id: question1.id
 })
 
 #/////////////////////////////////////
 question2 = Question.create!({
-  sujet: "Quel ingredient est present dans la Roulade de poulet?",
+  sujet: "Quel ingredient est present dans les linguine alla vongole ?",
   quizz_id: quizz2.id
 })
 
 
 
 answer1 = Answer.create!({
-  proposition: "pesto rosso",
+  proposition: "des palourdes",
   good_not_good: true,
   question_id: question2.id
 })
@@ -438,55 +436,54 @@ answer1 = Answer.create!({
 
 
 answer2 = Answer.create!({
-  proposition: "jambon blanc",
+  proposition: "du jambon de parme",
   good_not_good: false,
   question_id: question2.id
 })
 
 
 answer3 = Answer.create!({
-  proposition: "sauce italienne",
+  proposition: "de la mozarella",
   good_not_good: false,
   question_id: question2.id
 })
 
 
 answer4 = Answer.create!({
-  proposition: "gruyère",
+  proposition: "des courgettes",
   good_not_good: false,
   question_id: question2.id
 })
+
 #///////////////////////////////////////
 question3 = Question.create!({
-  sujet: "Quel ingredient est present dans le Scones au parmesan?",
+  sujet: "Quel ingredient est present dans le Tiramisu ?",
   quizz_id: quizz2.id
 })
 
 
-
-
 answer2 = Answer.create!({
-  proposition: "olives vertes",
+  proposition: "du citron",
   good_not_good: false,
   question_id: question3.id
 })
 
 
 answer3 = Answer.create!({
-  proposition: "ail",
+  proposition: "des fraises",
   good_not_good: false,
   question_id: question3.id
 })
 
 
 answer4 = Answer.create!({
-  proposition: "tomates",
+  proposition: "levure",
   good_not_good: false,
   question_id: question3.id
 })
 
 answer1 = Answer.create!({
-  proposition: "moutarde à l'ancienne",
+  proposition: "du mascarpone",
   good_not_good: true,
   question_id: question3.id
 })
@@ -494,7 +491,7 @@ answer1 = Answer.create!({
 #///////////////////////////////////
 
 question4 = Question.create!({
-  sujet: "Quel ingredient est present dans les Paupiettes de poulet?",
+  sujet: "Quel ingredient est present dans les Polpettine ?",
   quizz_id: quizz2.id
 })
 
@@ -502,27 +499,27 @@ question4 = Question.create!({
 
 
 answer2 = Answer.create!({
-  proposition: "levure chimique",
+  proposition: "de la menthe",
   good_not_good: false,
   question_id: question4.id
 })
 
 
 answer3 = Answer.create!({
-  proposition: "basilic",
+  proposition: "du basilic",
   good_not_good: false,
   question_id: question4.id
 })
 
 
 answer4 = Answer.create!({
-  proposition: "parmsean",
+  proposition: "des tomates",
   good_not_good: false,
   question_id: question4.id
 })
 
 answer1 = Answer.create!({
-  proposition: "blancs de poulet",
+  proposition: "du persil",
   good_not_good: true,
   question_id: question4.id
 })
@@ -530,34 +527,32 @@ answer1 = Answer.create!({
 #///////////////////////////////////////
 
 question5 = Question.create!({
-  sujet: "Quel ingredient est present dans le Taboulé?",
+  sujet: "Quel ingredient est present dans le Carpaccio ?",
   quizz_id: quizz2.id
 })
 
 
-
-
 answer2 = Answer.create!({
-  proposition: "courgette",
+  proposition: "du veau",
   good_not_good: false,
   question_id: question5.id
 })
 
 
 answer3 = Answer.create!({
-  proposition: "oignon",
+  proposition: "du poulpe",
   good_not_good: false,
   question_id: question5.id
 })
 
 answer1 = Answer.create!({
-  proposition: "roquette",
+  proposition: "du boeuf",
   good_not_good: true,
   question_id: question5.id
 })
 
 answer4 = Answer.create!({
-  proposition: "poivron jaune",
+  proposition: "des poivrons",
   good_not_good: false,
   question_id: question5.id
 })
@@ -577,14 +572,11 @@ answer4 = Answer.create!({
 #   question_id: question6.id
 # })
 
-
-
 # answer2 = Answer.create!({
 #   proposition: "tomates séchées",
 #   good_not_good: false,
 #   question_id: question6.id
 # })
-
 
 # answer3 = Answer.create!({
 #   proposition: "olives noires",
@@ -776,10 +768,6 @@ html_doc.search('.reponses').each_slice(3) do |group|
   end
   group_id += 1
 end
-
-
-
-
 
 
 
