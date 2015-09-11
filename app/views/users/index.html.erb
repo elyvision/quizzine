@@ -13,8 +13,12 @@
             <h3 class= "title-card" id="title-index-user"> Classement</h3>
           </div>
           <div class="question-show-quizz">
-            <p>Félicitation, votre score est de <%= @score %> points</p>
+            <p>Félicitation, votre score est de : <%= @score%> POINTS </p>
+            <% if current_user %>
+            <p>Votre total de points est de <%= current_user.total_score %>.</p>
+            <% else %>
             <p>Inscrivez vous pour cumulez vos points et tenter de gagner des repas dans les meilleures restaurant ! </p>
+            <% end %>
           </div>
             <div>
             <% if user_signed_in? %>
@@ -29,13 +33,24 @@
              <%= link_to('Quizzine', quizzs_path(@quizz), class: "btn btn-success")  %>
           </div>
 
-          <div id="answer-show-quizz">
+          <div class="container" id="answer-show-quizz">
             <p>Le tableau des High Score!</p>
-            <ul class="list-unstyled text-center">
-              <% @users.each do |user| %>
-                <li><%= user.name %> : <%= user.total_score %></li>
-              <% end %>
-            </ul>
+            <div class="row">
+              <div class="col-xs-6">
+                <ul class="list-unstyled text-center">
+                  <% @users.each do |user| %>
+                    <li class="text-left"><%= user.name %> :</li>
+                  <% end %>
+                </ul>
+              </div>
+              <div class="col-xs-6">
+                <ul class="list-unstyled text-center">
+                  <% @users.each do |user| %>
+                    <li class="text-right"><%= user.total_score %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
           </div>
 
 
